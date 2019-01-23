@@ -7,11 +7,20 @@ console.log("This is exercise 1")
 
 // You can start with this simpler version that outputs even numbers to the console and ignores odd numbers. You need to refactor this code to meet the requirements above.
 
-function chickenMonkey(){
-for (let currentNumber = 1; currentNumber <= 100; currentNumber++) {
-    // Divide the current number by 2, and check if the remainder is 0
-    if (currentNumber % 5 === 0) {
-        console.log(currentNumber) // Only 2, 4, 6 will appear
-    } else if(currentNumber)
+function chickenMonkey() {
+    for (let currentNumber = 1; currentNumber <= 100; currentNumber++) {
+        
+        // Divide the current number by 2, and check if the remainder is 0
+        if (currentNumber % 5 === 0) {
+            if (currentNumber % 7 === 0) {
+                console.log("ChickenMonkey")
+            }
+            console.log("Chicken") // Only 0, 5, 10... will appear
+        } else if (currentNumber % 7 === 0)
+            console.log("Monkey")
+        else
+            console.log(currentNumber);
+    }
 }
-}
+
+chickenMonkey();
